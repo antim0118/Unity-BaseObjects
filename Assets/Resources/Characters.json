@@ -1,0 +1,36 @@
+{
+    "Characters": [
+        {
+            "Name": "Airborne",
+            "Level": 5,
+            "Model": "airborne/untitled",
+            "Avatar": "Previews/airborne",
+			"PreviewPos": "0 0.342 0",
+			"PreviewAng": "0 180 0"
+        },
+		{
+            "Name": "Belle",
+            "Level": 6,
+            "Model": "belle/Belle",
+            "Avatar": "Previews/belle",
+			"PreviewPos": "0 0 0",
+			"PreviewAng": "0 0 0"
+        },
+		{
+            "Name": "Behemoth",
+            "Level": 8,
+            "Model": "behemoth/Behemoth",
+            "Avatar": "Previews/behemoth",
+			"PreviewPos": "-0.08 -0.04 0",
+			"PreviewAng": "0 0 0"
+        },
+		{
+            "Name": "Victor",
+            "Level": 3,
+            "Model": "bad-guy/VICTOR",
+            "Avatar": "Previews/victor",
+			"PreviewPos": "0 0 0",
+			"PreviewAng": "-90 90 0"
+        }
+    ]
+}
