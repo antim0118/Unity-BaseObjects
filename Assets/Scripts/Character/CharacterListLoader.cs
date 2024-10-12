@@ -14,6 +14,7 @@ namespace InlyIT
 			{
 				GameObject go = Instantiate(Prefab, ViewportContent);
 				Character character = go.GetComponent<Character>();
+				character.loader = this;
 				character.Name = ch.Name;
 				character.Level = ch.Level;
 				character.Model = Resources.Load<GameObject>($"Models/" + ch.Model);

@@ -13,7 +13,6 @@ namespace InlyIT
 		void Awake()
 		{
 			button = GetComponent<Button>();
-			loader = FindObjectOfType<ObjectListLoader>();
 		}
 
 		void OnEnable()
