@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace InlyIT
@@ -10,7 +9,7 @@ namespace InlyIT
 
 		public string Description;
 		public Sprite Preview;
-		public int SceneId;
+		public string SceneName;
 
 		void Start()
 		{
@@ -28,7 +27,7 @@ namespace InlyIT
 			base.SetPreviewInfo(previewText);
 			Debug.Log("Called SetPreviewInfo: " + Name + "\n" +
 				"Description:" + Description + "\n" +
-				"SceneId:" + SceneId);
+				"SceneName:" + SceneName);
 
 			LocationListLoader loader = (LocationListLoader)this.loader;
 			loader.SetPreviewImage(Preview);

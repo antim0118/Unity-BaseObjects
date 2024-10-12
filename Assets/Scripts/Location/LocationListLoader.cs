@@ -19,7 +19,7 @@ namespace InlyIT
 				location.Name = loc.Name;
 				location.Description = loc.Description;
 				location.Preview = Resources.Load<Sprite>($"Locations/" + loc.PreviewImage);
-				location.SceneId = loc.SceneId;
+				location.SceneName = loc.SceneName;
 			}
 		}
 

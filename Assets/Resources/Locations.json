@@ -1,28 +1,28 @@
 {
-    "Locations": [
-        {
-            "Name": "City",
-            "Description": "A bustling metropolis filled with towering buildings, vibrant streets, and countless stories waiting to unfold. ",
-            "PreviewImage": "city",
-            "SceneId": 0
-        },
-		{
-            "Name": "Desert",
-            "Description": "A vast expanse of golden sand, unforgiving sun, and ancient secrets hidden beneath the dunes.",
-            "PreviewImage": "desert",
-            "SceneId": 0
-        },
-		{
-            "Name": "Forest",
-            "Description": "A verdant haven of towering trees, whispering winds, and hidden paths leading to unknown wonders.",
-            "PreviewImage": "forest",
-            "SceneId": 0
-        },
-		{
-            "Name": "Island",
-            "Description": "A secluded paradise with pristine beaches, crystal-clear waters, and a mystery waiting to be discovered.",
-            "PreviewImage": "island",
-            "SceneId": 0
-        }
-    ]
+  "Locations": [
+    {
+      "Name": "City",
+      "Description": "A bustling metropolis filled with towering buildings, vibrant streets, and countless stories waiting to unfold. ",
+      "PreviewImage": "city",
+      "SceneName": "City"
+    },
+    {
+      "Name": "Desert",
+      "Description": "A vast expanse of golden sand, unforgiving sun, and ancient secrets hidden beneath the dunes.",
+      "PreviewImage": "desert",
+      "SceneName": "Desert"
+    },
+    {
+      "Name": "Forest",
+      "Description": "A verdant haven of towering trees, whispering winds, and hidden paths leading to unknown wonders.",
+      "PreviewImage": "forest",
+      "SceneName": "Forest"
+    },
+    {
+      "Name": "Island",
+      "Description": "A secluded paradise with pristine beaches, crystal-clear waters, and a mystery waiting to be discovered.",
+      "PreviewImage": "island",
+      "SceneName": "Island"
+    }
+  ]
 }

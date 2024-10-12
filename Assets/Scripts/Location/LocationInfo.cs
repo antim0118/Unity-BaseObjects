@@ -8,6 +8,6 @@ namespace InlyIT
 		public string Name;
 		public string Description;
 		public string PreviewImage;
-		public int SceneId;
+		public string SceneName;
 	}
 }
