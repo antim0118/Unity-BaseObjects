@@ -13,8 +13,17 @@ namespace InlyIT
 		void Awake()
 		{
 			button = GetComponent<Button>();
-			button.onClick.AddListener(OnObjectSelect);
 			loader = FindObjectOfType<ObjectListLoader>();
+		}
+
+		void OnEnable()
+		{
+			button.onClick.AddListener(OnObjectSelect);
+		}
+
+		void OnDisable()
+		{
+			button.onClick.RemoveAllListeners();
 		}
 
 		public virtual void SetPreviewInfo(Text previewText)
