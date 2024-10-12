@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +8,8 @@ namespace InlyIT
 {
 	public class Character : BaseObject
 	{
+		static GameObject previewModel;
+
 		[SerializeField] Image AvatarObject;
 		[SerializeField] Text NameTextObject;
 
@@ -34,12 +37,10 @@ namespace InlyIT
 				"Pos:" + PreviewPos + "\n" +
 				"Ang:" + PreviewAng);
 
-			//удалить имеющиеся превью-модели со сцены
-			GameObject.FindGameObjectsWithTag("PreviewModel").ToList().ForEach(m => Destroy(m));
-
 			//поместить модель перед камерой
-			GameObject previewModel = new GameObject("PreviewModel");
-			previewModel.tag = "PreviewModel";
+			if (previewModel != null)
+				Destroy(previewModel);
+			previewModel = new GameObject("PreviewModel");
 			GameObject model = Instantiate(Model, previewModel.transform);
 			model.transform.localPosition = PreviewPos;
 			model.transform.localEulerAngles = PreviewAng;
