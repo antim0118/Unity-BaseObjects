@@ -3,9 +3,8 @@
 namespace InlyIT
 {
 	[Serializable]
-	public class CharacterInfo
+	public class CharacterInfo : BaseObjectInfo
 	{
-		public string Name;
 		public int Level;
 		public string Model;
 		public string Avatar;

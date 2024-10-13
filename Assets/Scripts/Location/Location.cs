@@ -5,29 +5,34 @@ namespace InlyIT
 {
 	public class Location : BaseObject
 	{
-		[SerializeField] Image PreviewImage;
+		[SerializeField] Image IconImage;
 
-		public string Description;
-		public Sprite Preview;
-		public string SceneName;
+		LocationInfo locationInfo => (LocationInfo)base.Info;
+		public new LocationInfo Info
+		{
+			get => (LocationInfo)base.Info;
+			set => base.Info = value;
+		}
+
+		Sprite Preview;
 
 		void Start()
 		{
-			PreviewImage.sprite = Preview;
+			IconImage.sprite = Preview = Resources.Load<Sprite>($"Locations/" + locationInfo.PreviewImage);
 		}
 
 		public override string GetDescription()
 		{
-			return $"Name: {Name}\n" +
-				$"Description: {Description}";
+			return $"Name: {locationInfo.Name}\n" +
+				$"Description: {locationInfo.Description}";
 		}
 
 		public override void SetPreviewInfo(Text previewText)
 		{
 			base.SetPreviewInfo(previewText);
-			Debug.Log("Called SetPreviewInfo: " + Name + "\n" +
-				"Description:" + Description + "\n" +
-				"SceneName:" + SceneName);
+			Debug.Log("Called SetPreviewInfo: " + Info.Name + "\n" +
+				"Description:" + locationInfo.Description + "\n" +
+				"SceneName:" + locationInfo.SceneName);
 
 			LocationListLoader loader = (LocationListLoader)this.loader;
 			loader.SetPreviewImage(Preview);

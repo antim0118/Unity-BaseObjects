@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 namespace InlyIT
@@ -13,27 +14,37 @@ namespace InlyIT
 		[SerializeField] Image AvatarObject;
 		[SerializeField] Text NameTextObject;
 
-		public int Level;
-		public Sprite Avatar;
-		public GameObject Model;
-		public Vector3 PreviewPos, PreviewAng;
+		public new CharacterInfo Info
+		{
+			get => (CharacterInfo)base.Info;
+			set => base.Info = value;
+		}
+
+		Sprite Avatar;
+		GameObject Model;
+		Vector3 PreviewPos, PreviewAng;
 
 		void Start()
 		{
+			Model = Resources.Load<GameObject>($"Models/" + Info.Model);
+			Avatar = Resources.Load<Sprite>($"Models/" + Info.Avatar);
+			PreviewPos = Info.PreviewPos.ToVector3();
+			PreviewAng = Info.PreviewAng.ToVector3();
+
 			AvatarObject.sprite = Avatar;
-			NameTextObject.text = Name;
+			NameTextObject.text = Info.Name;
 		}
 
 		public override string GetDescription()
 		{
-			return $"Name: {Name}\n" +
-				$"Level: {Level}";
+			return $"Name: {Info.Name}\n" +
+				$"Level: {Info.Level}";
 		}
 
 		public override void SetPreviewInfo(Text previewText)
 		{
 			base.SetPreviewInfo(previewText);
-			Debug.Log("Called SetPreviewInfo: " + Name + "\n" +
+			Debug.Log("Called SetPreviewInfo: " + Info.Name + "\n" +
 				"Pos:" + PreviewPos + "\n" +
 				"Ang:" + PreviewAng);
 

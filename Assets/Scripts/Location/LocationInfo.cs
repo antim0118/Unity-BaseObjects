@@ -3,9 +3,8 @@
 namespace InlyIT
 {
 	[Serializable]
-	public class LocationInfo
+	public class LocationInfo : BaseObjectInfo
 	{
-		public string Name;
 		public string Description;
 		public string PreviewImage;
 		public string SceneName;

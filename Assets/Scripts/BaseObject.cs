@@ -5,7 +5,7 @@ namespace InlyIT
 {
 	public class BaseObject : MonoBehaviour
 	{
-		public string Name { get; set; }
+		public BaseObjectInfo Info;
 
 		Button button;
 		internal ObjectListLoader loader;
@@ -32,7 +32,7 @@ namespace InlyIT
 
 		public virtual string GetDescription()
 		{
-			return $"Name: {Name}";
+			return $"Name: {Info.Name}";
 		}
 
 		public void OnObjectSelect()

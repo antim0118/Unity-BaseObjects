@@ -16,10 +16,7 @@ namespace InlyIT
 				GameObject go = Instantiate(Prefab, ViewportContent);
 				Location location = go.GetComponent<Location>();
 				location.loader = this;
-				location.Name = loc.Name;
-				location.Description = loc.Description;
-				location.Preview = Resources.Load<Sprite>($"Locations/" + loc.PreviewImage);
-				location.SceneName = loc.SceneName;
+				location.Info = loc;
 			}
 		}
 
